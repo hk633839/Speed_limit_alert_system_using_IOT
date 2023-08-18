@@ -1,14 +1,17 @@
 # Speed_limit_alert_system_using_IOT
 
-This is a two way communication project. The components used are Arduino, NodeMCU, Alert device(Buzzer), IR proximity Sensors.
+This project involves two-way communication and utilizes Arduino, NodeMCU, IR proximity sensors, and an alert device (buzzer) to accomplish its objectives. The process operates as follows:
 
-The working is as follows:
+1. Two IR proximity sensors are positioned along a road. As a vehicle passes the first sensor, it records the time. The second sensor does the same as the vehicle crosses it.
 
-There will be two IR proximity sensors and when a vehicle crosses the first sensor it will note the time and the second sensor also does the same.
-Then the difference of these two will be calculated and the distance between the two sensors is divided by the time to obtain the speed of the vehicle.
-Now the speed is sent to the cloud using NodeMCU. In the cloud, it verifies whether the speed is legal or not.
+2. The time difference between the two sensors is calculated, and by dividing the distance between them by this time difference, the vehicle's speed is determined.
 
-If the speed is illegal, then it will send an alert to the secondary alert system placed at some further point down the road.
-Here NodeMCU will receive the alert and transmits it to Arduino using serial communication. Then Arduino will alert the driver using some alert mechanism.
+3. The calculated speed is transmitted to the cloud via NodeMCU. Within the cloud, a speed legality check is performed to verify if the vehicle's speed complies with regulations.
+
+4. In the event of an illegal speed, an alert is dispatched to a secondary alert system situated further down the road.
+
+5. The NodeMCU on the secondary alert system receives this alert and communicates it to the Arduino through serial communication.
+
+6. The Arduino, upon receiving the alert, triggers an alert mechanism (buzzer or similar) to notify the driver of the violation.
 
 Here the files are uploaded as CPP files rather than traditional Arduino IDE readables.
