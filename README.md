@@ -10,3 +10,5 @@ Now the speed is sent to the cloud using NodeMCU. In the cloud, it verifies whet
 
 If the speed is illegal, then it will send an alert to the secondary alert system placed at some further point down the road.
 Here NodeMCU will receive the alert and transmits it to Arduino using serial communication. Then Arduino will alert the driver using some alert mechanism.
+
+Here the files are uploaded as CPP files rather than traditional Arduino IDE readables.
